@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
 from pathlib import Path
-import Transformation_STL_var_angle as tf1
-import Backtransformation_GCode_var_angle as tf2
+import Transformation_MiniLibrary as tf1
+import Backtransformation_MiniLibrary as tf2
 
 inputf1="select an STL"
 inputp1="a"
@@ -147,5 +147,6 @@ ttypeselect2.grid(column = 0, row = 3,padx = 20,pady = 10)
 
 #Tab 3 functions
 ttk.Label(tab3,text ="Info").grid(column = 0,row = 0, padx = 30,pady = 30)
+
 
 root.mainloop()
