@@ -14,7 +14,9 @@ EasyConical can only process gcode files with relatve extrusion (e) distances, f
 
 ### License
 
-x
+This program is open source and licensed under the GNU General Public License Version 3.0
+
+[(https://www.gnu.org/licenses/gpl-3.0.en.html)]()
 
 ### Citations
 
