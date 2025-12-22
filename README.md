@@ -4,13 +4,13 @@ EasyConical is for generating 3D printing GCode without the need for support str
 
 ### User Guide
 
-x
+Please refer to the [user guide file](./UserGuide.pdf). Remember to use EasyConical alongslide a slicer that supports relative extrusion(e) distances.
 
 ### Current Limitations
 
 There is a feature/bug in slicers based on PrusaSlicer that sets part local part origins different from the bed origin, but this can be circumvented as described in the user guide.
 
-EasyConical can only process gcode files with absolute extrusion (e) distances, files generated with relative e distances will not be processed correctly. We are currently working on another program that can convert gcode files between relative e to absolute e, but
+EasyConical can only process gcode files with relatve extrusion (e) distances, files generated with absolute e distances will not be processed correctly. The only way around this is to use a slicer compatible with relative e distances.
 
 ### License
 
