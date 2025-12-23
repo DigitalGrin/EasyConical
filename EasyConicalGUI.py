@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
 from pathlib import Path
+from webbrowser import open
 import Transformation_MiniLibrary as tf1
 import Backtransformation_MiniLibrary as tf2
 
@@ -14,7 +15,7 @@ output2="select output path"
 transformation_types=("outward","inward")
 
 root = tk.Tk()
-root.title("Conical Slicing Helper")
+root.title("EasyConical")
 root.geometry('500x370')
 tabControl = ttk.Notebook(root)
 cone_angle=tk.StringVar(value="16")
@@ -146,7 +147,23 @@ ttypeselect2["values"] = transformation_types
 ttypeselect2.grid(column = 0, row = 3,padx = 20,pady = 10)
 
 #Tab 3 functions
-ttk.Label(tab3,text ="Info").grid(column = 0,row = 0, padx = 30,pady = 30)
+def webopen1():
+    open('https://github.com/IAm-ThePerson/EasyConical/blob/main/UserGuide.pdf')
 
+def webopen2():
+    open('https://github.com/IAm-ThePerson/EasyConical')
+
+InfoText1="Welcome to EasyConical! (by Alex Herskovitz)"
+InfoText2="This software is designed for use alongside a regular slicer."
+InfoText3="Please refer to the user guide for a detailed explanation of this software"
+InfoText4="This software has been modified from other projects, for citations and licenses,"
+InfoText5="please refer to this project's GitHub page."
+
+ttk.Label(tab3,text =InfoText1).grid(column = 0,row = 0, padx = 30,pady = 10)
+ttk.Label(tab3,text =InfoText2).grid(column = 0,row = 1, padx = 30,pady = 10)
+ttk.Button(tab3, text = InfoText3, command = webopen1 ).grid(column = 0, row = 2,padx = 0,pady = 10)
+ttk.Label(tab3,text =InfoText4).grid(column = 0,row = 3, padx = 30,pady = 10)
+ttk.Button(tab3, text = InfoText5, command = webopen2 ).grid(column = 0, row = 4,padx = 0,pady = 0)
 
 root.mainloop()
+
