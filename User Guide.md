@@ -3,7 +3,7 @@
 # User Guide
 EasyConical is meant to be used alongside a regular 3D print slicer for the best results. This guide will explain how to use our software along with the steps you need to take in the slicer you are using. All photos in this guide were taken in OrcaSlicer.
 ## Initial Slicer Setup
-Before you begin, make sure the slicer you are using is able to use relative E distances. If it cannot, you must use another slicer, as EasyConical can only process relative E distances, not absolute.
+Before you begin, make sure the slicer you are using is compatible with the settings in the 'Required Settings' section of this tutorial. If it cannot, you must use another slicer, as EasyConical requires certain slicer settings in order to operate.
 
 EasyConical works by warping the print file around the vertical origin axis(usually Z). Unless your slicer can process parts outside of the buildplate, you will need to move the origin to the center of the buildplate. This can be done by setting the origin X and Y positions to exactly half of the buildplate’s X and Y size. Most slicers give you the ability to customize the buildplate settings, including moving the origin. 
 ![The buildplate customization menu in OrcaSlicer, with the origin set to the center of the buildplate.](https://i.imgur.com/VVbtjjM.png)
@@ -14,7 +14,7 @@ Once this has been done, the next step is to import the file you are working wit
 <sub> A part in OrcaSlicer centered on the vertical origin axis, in this case ‘Z’ </sub>
 
 ## The Workaround
-If you are using a PrusaSlicer or another slicer that has been derived from it, there is an additional process that must be done, you can skip this step if you are not using a PrusaSlicer based slicing software. EasyConical works by warping models around the origin, but PrusaSlicer creates additional part origins not relative to the buildplate origin. To force the part origin and the buildplate origin to be the same, create a thin rectangular model the same exact size as the buildplate, and move it to the center of the buildplate. Now this whole setup can be exported as a single STL file.
+If you are using a PrusaSlicer or another slicer that has been derived from it, there is an additional process that must be done. Otherwise, you may skip this step, although if you are having alignment issues it is also recommended that you do this. EasyConical works by warping models around the origin, but PrusaSlicer creates additional part origins not relative to the buildplate origin. To force the part origin and the buildplate origin to be the same, create a thin rectangular model the same exact size as the buildplate, and move it to the center of the buildplate. Now this whole setup can be exported as a single STL file.
 ![The OrcaSlicer buildplate with the part and a rectangle the size of the buildplate.](https://i.imgur.com/cFf4B8j.png)
 <sub> The OrcaSlicer buildplate with the part and a rectangle the size of the buildplate. </sub>
 
@@ -33,12 +33,14 @@ If you did not perform the workaround steps, take the model exported by EasyConi
 ![Splitting the distorted objects in OrcaSlicer.](https://i.imgur.com/JVQGTqr.png)
 <sub> Splitting the distorted objects in OrcaSlicer. </sub>
 
-Now that you have an isolated, distorted version of your model in your slicer, set up the normal settings for your printer. The settings for conical slicing may need to be slightly different than your regular settings, and there are a few settings required for the process to run. The ‘use relative e distances’ Setting must be turned on for the model to process correctly. There should be no skirt on the print, and make sure to check the starting gcode and remove all mentions of nozzle priming, as well as turn off any nozzle priming settings. Most slicers should have this option, but certain slicers(like FlashPrint) do not, and are sadly incompatible with EasyConical. Once the desired settings have been dialed in, slice the part using the processes in the slicer you are using, and export the gcode file to a known location.
+Now that you have an isolated, distorted version of your model in your slicer, set up the normal settings for your printer. Once you have done this, modify your slicer settings in accordance with the 'Required Settings' section of this tutorial. Most slicers should have all of these settings, but certain slicers do not, and are sadly incompatible with EasyConical. Once the desired settings have been dialed in, slice the part using the processes in the slicer you are using, and export the gcode file to a known location.
+
 ![The distorted STL loaded in OrcaSlicer.](https://i.imgur.com/X78nxyk.png)
 <sub> The distorted STL loaded in OrcaSlicer. </sub>
 
 ## Back Transformation
 Open up the second tab in EasyConical, labelled ‘Back Transform’. Use the select buttons to select the gcode file exported by your slicer and the folder in which to output the final file. The parameter for ‘Cone Angle’ should be the same number used when forward transforming, and the parameter for ‘Cone Type’ should be set to the same value used in the ‘Transformation Type’ parameter during forward transformation. ‘First Layer Height’ is different for every printer, but it should be relatively close to zero, as this affects the height of where the model is printed. ‘X Shift’ and ‘Y Shift’ should be set to half the size of the buildplate, respectively to the X and Y sizes of the buildplate. Once you are ready, click the ‘Transform!’ button, and wait until an ‘Operation finished’ message shows up.
+
 ![The ‘Back Transform’ menu in EasyConical](https://i.imgur.com/auB0RAB.png)
 
 <sub> The ‘Back Transform’ menu in EasyConical </sub>
@@ -48,6 +50,15 @@ This process can take up to 2-3 minutes, and the GUI will appear to be frozen du
 ![The final product in OrcaSlicer’s gcode viewer](https://i.imgur.com/qbWj11m.png)
 
 <sub> The final product in OrcaSlicer’s gcode viewer </sub>
+
+## Required Settings
+This section will go over all the settings that MUST be set a certain way. All other settings may be set to your preference, but may need to be modified for print quality.
+### Relative E Distances
+Relative extrusion (e) distances must be enabled in order for EasyConical to process parts correctly. Slicers missing this option cannot currently be used.
+### Skirt and Brim
+Both skirts and brims must be turned off in the slicer settings. If your part requires a skirt or brim, you can add one manually to the original STL in a modeling software.
+### Nozzle Priming/Clearing Lines
+Nozzle priming lines must not be enabled in the slicer settings. They are called different things in different softwares, but are usually found as a setting or written into the starting gcode, which can usually be modified. If you would like your print to have a priming line, it must be manually added to the gcode after the back transformation is complete.
 
 ## Advanced Settings
 This section will discuss the optional settings found in EasyConical.
