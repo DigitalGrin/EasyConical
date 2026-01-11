@@ -1,16 +1,18 @@
 # EasyConical
 ### Introduction
-EasyConical is for generating 3D printing GCode without the need for support structures. It is intended to be used alongside regular 3D slicing softwares like [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) or [Cura](https://github.com/Ultimaker/Cura). Our software is an easy to learn, plug-and-play soluion with virtually no setup time.
+EasyConical is for generating 3D printing GCode without the need for support structures. It is intended to be used alongside regular 3D slicing softwares like [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) or [SuperSlicer](https://github.com/supermerill/SuperSlicer). Our software is an easy to learn, plug-and-play soluion with virtually no setup time.
 
 ### User Guide
 
-Please refer to the [user guide file](./UserGuide.pdf). Remember to use EasyConical alongslide a slicer that supports relative extrusion(e) distances.
+Please refer to the [User Guide](./User%20Guide.md). Remember to use EasyConical alongslide a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
 
 ### Current Limitations
 
-There is a feature/bug in slicers based on PrusaSlicer that sets part local part origins different from the bed origin, but this can be circumvented as described in the user guide.
+There is a feature/bug in slicers based on PrusaSlicer that sets local part origins different from the bed origin, but this can be circumvented as described in the user guide.
 
-EasyConical can only process gcode files with relatve extrusion (e) distances, files generated with absolute e distances will not be processed correctly. The only way around this is to use a slicer compatible with relative e distances.
+EasyConical can only process gcode files with relatve extrusion (e) distances.
+
+EasyConical can only process singular models.
 
 ### License
 
