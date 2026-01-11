@@ -3,7 +3,7 @@
 # User Guide
 EasyConical is meant to be used alongside a regular 3D print slicer for the best results. This guide will explain how to use our software along with the steps you need to take in the slicer you are using. All photos in this guide were taken in OrcaSlicer.
 ## Initial Slicer Setup
-Before you begin, make sure the slicer you are using is compatible with the settings in the 'Required Settings' section of this tutorial. If it cannot, you must use another slicer, as EasyConical requires certain slicer settings in order to operate.
+Before you begin, make sure the slicer you are using is compatible with the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of this tutorial. If it cannot, you must use another slicer, as EasyConical requires certain slicer settings in order to operate.
 
 EasyConical works by warping the print file around the vertical origin axis(usually Z). Unless your slicer can process parts outside of the buildplate, you will need to move the origin to the center of the buildplate. This can be done by setting the origin X and Y positions to exactly half of the buildplate’s X and Y size. Most slicers give you the ability to customize the buildplate settings, including moving the origin. 
 ![The buildplate customization menu in OrcaSlicer, with the origin set to the center of the buildplate.](https://i.imgur.com/VVbtjjM.png)
@@ -19,7 +19,7 @@ If you are using a PrusaSlicer or another slicer that has been derived from it, 
 <sub> The OrcaSlicer buildplate with the part and a rectangle the size of the buildplate. </sub>
 
 ## Forward Transformation
-Now that the file has been prepared, it’s finally time to open up EasyConical. Run the .exe file, and in a few moments the menu will pop up. Make sure that the ‘Forward Transform’ tab at the top is selected. Use the select buttons to select the STL you have exported from your slicer and the folder in which to output the next file. Make sure you select the file that you have exported from the slicer, and not the original model file. The three settings, ‘Cone Angle’, ‘Refinement Iterations’, and ‘Transformation Type’, can be left at default, and are explained further in the ‘Advanced Settings’ section of this tutorial. Once you are satisfied with the inputs, click the ‘Transform!’ button and wait for a message that says ‘Operation finished’.
+Now that the file has been prepared, it’s finally time to open up EasyConical. Run the .exe file, and in a few moments the menu will pop up. Make sure that the ‘Forward Transform’ tab at the top is selected. Use the select buttons to select the STL you have exported from your slicer and the folder in which to output the next file. Make sure you select the file that you have exported from the slicer, and not the original model file. The three settings, ‘Cone Angle’, ‘Refinement Iterations’, and ‘Transformation Type’, can be left at default, and are explained further in the ['Advanced Settings'](./User%20Guide.md#advanced-settings) section of this tutorial. Once you are satisfied with the inputs, click the ‘Transform!’ button and wait for a message that says ‘Operation finished’.
 
 ![The ‘Forward Transform’ tab in EasyConical](https://i.imgur.com/Nc19JUT.png)
 
@@ -33,7 +33,7 @@ If you did not perform the workaround steps, take the model exported by EasyConi
 ![Splitting the distorted objects in OrcaSlicer.](https://i.imgur.com/JVQGTqr.png)
 <sub> Splitting the distorted objects in OrcaSlicer. </sub>
 
-Now that you have an isolated, distorted version of your model in your slicer, set up the normal settings for your printer. Once you have done this, modify your slicer settings in accordance with the 'Required Settings' section of this tutorial. Most slicers should have all of these settings, but certain slicers do not, and are sadly incompatible with EasyConical. Once the desired settings have been dialed in, slice the part using the processes in the slicer you are using, and export the gcode file to a known location.
+Now that you have an isolated, distorted version of your model in your slicer, set up the normal settings for your printer. Once you have done this, modify your slicer settings in accordance with the ['Required Settings'](./User%20Guide.md#required-settings) section of this tutorial. Most slicers should have all of these settings, but certain slicers do not, and are sadly incompatible with EasyConical. Once the desired settings have been dialed in, slice the part using the processes in the slicer you are using, and export the gcode file to a known location.
 
 ![The distorted STL loaded in OrcaSlicer.](https://i.imgur.com/X78nxyk.png)
 <sub> The distorted STL loaded in OrcaSlicer. </sub>
