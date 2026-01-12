@@ -23,7 +23,7 @@ cone_angle2=tk.StringVar(value="16")
 refinement_iterations=tk.StringVar(value="1")
 ttypes=tk.StringVar(value="outward")
 cone_type=tk.StringVar(value="outward")
-first_layer_height=tk.StringVar(value="-0.2")
+first_layer_height=tk.StringVar(value="0")
 x_shift=tk.StringVar(value="110")
 y_shift=tk.StringVar(value="90")
 
@@ -166,4 +166,5 @@ ttk.Label(tab3,text =InfoText4).grid(column = 0,row = 3, padx = 30,pady = 10)
 ttk.Button(tab3, text = InfoText5, command = webopen2 ).grid(column = 0, row = 4,padx = 0,pady = 0)
 
 root.mainloop()
+
 
