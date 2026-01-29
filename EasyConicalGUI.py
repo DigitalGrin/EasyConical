@@ -148,10 +148,10 @@ ttypeselect2.grid(column = 0, row = 3,padx = 20,pady = 10)
 
 #Tab 3 functions
 def webopen1():
-    open('https://github.com/IAm-ThePerson/EasyConical/blob/main/UserGuide.pdf')
+    open('https://github.com/DigitalGrin/EasyConical/blob/main/User%20Guide.md')
 
 def webopen2():
-    open('https://github.com/IAm-ThePerson/EasyConical')
+    open('https://github.com/DigitalGrin/EasyConical')
 
 InfoText1="Welcome to EasyConical! (by Alex Herskovitz)"
 InfoText2="This software is designed for use alongside a regular slicer."
@@ -166,5 +166,6 @@ ttk.Label(tab3,text =InfoText4).grid(column = 0,row = 3, padx = 30,pady = 10)
 ttk.Button(tab3, text = InfoText5, command = webopen2 ).grid(column = 0, row = 4,padx = 0,pady = 0)
 
 root.mainloop()
+
 
 
