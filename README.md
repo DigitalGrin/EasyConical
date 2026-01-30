@@ -6,13 +6,21 @@ EasyConical is for generating 3D printing GCode without the need for support str
 
 Please refer to the [User Guide](./User%20Guide.md). Remember to use EasyConical alongslide a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
 
+### Get EasyConical
+
+The current version of EasyConical for Windows and Mac can be found on the [releases page](https://github.com/DigitalGrin/EasyConical/releases).
+
 ### Current Limitations
 
-There is a feature/bug in slicers based on PrusaSlicer that sets local part origins different from the bed origin, but this can be circumvented as described in the user guide.
+Certain workarounds, listed in the user guide, must be used in slicers based on Prusaslicer.
 
 EasyConical can only process gcode files with relatve extrusion (e) distances.
 
 EasyConical can only process singular models.
+
+### Feedback
+
+Please report all bugs and suggestions in the [issues page](https://github.com/DigitalGrin/EasyConical/issues)
 
 ### License
 
