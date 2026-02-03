@@ -1,10 +1,10 @@
 # EasyConical
 ### Introduction
-EasyConical is for generating 3D printing GCode without the need for support structures. It is intended to be used alongside regular 3D slicing softwares like [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) or [SuperSlicer](https://github.com/supermerill/SuperSlicer). Our software is an easy to learn, plug-and-play soluion with virtually no setup time.
+EasyConical is for generating 3D printing GCode without the need for support structures. It is intended to be used alongside regular 3D slicing softwares like [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) or [SuperSlicer](https://github.com/supermerill/SuperSlicer). Our software is an easy to learn, plug-and-play solution with virtually no setup time.
 
 ### User Guide
 
-Please refer to the [User Guide](./User%20Guide.md). Remember to use EasyConical alongslide a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
+Please refer to the [User Guide](./User%20Guide.md). Remember to use EasyConical alongside a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
 
 ### Get EasyConical
 
