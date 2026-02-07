@@ -4,7 +4,7 @@ EasyConical is for generating 3D printing GCode without the need for support str
 
 ### User Guide
 
-Please refer to the [User Guide](./User%20Guide.md). Remember to use EasyConical alongside a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
+Please refer to the [User Guide](./User%20Guide.md) or this handy [Tutorial Video](https://www.youtube.com/watch?v=8OwJpy0NEvE). Remember to use EasyConical alongside a slicer that can process the settings in the ['Required Settings'](./User%20Guide.md#required-settings) section of the user guide.
 
 ### Get EasyConical
 
